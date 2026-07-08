@@ -134,6 +134,80 @@
         </div>
     </section>
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+    <script>
+        (function ($) {
+            "use strict";
+
+            // 1. Sticky Navigation & Back to Top Toggle
+            $(window).on('scroll', function () {
+                var top = $(window).scrollTop();
+                $(".navbar-fixed-top").toggleClass("top-nav-collapse", $(".navbar").offset().top > 50);
+                $('.header-top-area, .fixed-top').toggleClass('menu-bg', top > 100);
+                $('.back-to-top').toggle(top > 200);
+            });
+
+            // 2. Smooth Scrolling for Page Links
+            $('a.page-scroll[href*="#"]:not([href="#"])').on('click', function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash).length ? $(this.hash) : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html, body').animate({ scrollTop: (target.offset().top - 80) }, 1500, "easeInOutExpo");
+                        return false;
+                    }
+                }
+            });
+
+            // 3. Back to Top Click
+            $('.back-to-top').on('click', function (e) {
+                e.preventDefault();
+                $('html, body').animate({ scrollTop: 0 }, 600);
+            });
+
+            // 4. Auto Close Mobile Nav Menu
+            function close_toggle() {
+                if ($(window).width() <= 768) {
+                    $('.navbar-collapse a').on('click', function () { $('.navbar-collapse').collapse('hide'); });
+                } else {
+                    $('.navbar .navbar-inverse a').off('click');
+                }
+            }
+            close_toggle();
+            $(window).resize(close_toggle);
+
+            // 5. AJAX Contact Form Submission
+            $("#contactForm").on("submit", function (e) {
+                e.preventDefault();
+
+                $.ajax({
+                    type: "POST",
+                    url: "php/form-process.php",
+                    data: $(this).serialize(),
+                    success: function (text) {
+                        if (text === "success") {
+                            $("#contactForm")[0].reset();
+                            $("#msgSubmit").removeClass().addClass("h3 text-center text-success").text("Message Submitted!");
+                        } else {
+                            $("#contactForm").removeClass().addClass('shake animated').one('animationend', function () { $(this).removeClass(); });
+                            $("#msgSubmit").removeClass().addClass("h3 text-center text-danger").text(text);
+                        }
+                    }
+                });
+            });
+
+            // 6. Page Init
+            $(window).on('load', function () {
+                $('body').scrollspy({ target: '.navbar-collapse', offset: 195 });
+            });
+            $('#preloader').fadeOut();
+
+        })(jQuery);
+    </script>
 </body>
 
 </html>
