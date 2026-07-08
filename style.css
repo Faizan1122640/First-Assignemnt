@@ -1,42 +1,74 @@
+:root {
+  --primary: #3c9cfd;          
+  --primary-gradient-start: #5533ff;
+  --primary-gradient-end: #25ddf5;   
+  --secondary: #3ecf8e;      
+  --accent: #ff704f;          
+  
+  --text-dark: #151948;        
+  --text-muted: #5e629c;       
+  --text-body: #a0a6ad;      
+  
+  --bg-light: #f9f9f9;
+  --bg-dark: #180e29;
+  --bg-card: #24153c;          
+  
+  --white: #fff;
+  --black: #000;
+  --border-color: #ddd;
+  --border-light: #ededed;
+
+  --btn-signin-bg: #7fc9fb;
+  --apple-cyan: #2dfbff;
+  --subtitle-bg: #dbecff;
+  --subtitle-text: #191c1e;
+  --footer-border: #3c1f6e;
+  --green-tint: #e3fff2;
+  --green-focus: #e5fff3;
+}
+
 @import url("https://fonts.googleapis.com/css?family=Rubik:400,400i,500");
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600");
 
 body {
-    font-family: 'Rubik', sans-serif;
-    color: #a0a6ad;
-    font-size: 14px;
-    font-weight: 400;
-    background: #fff;
-    overflow-x: hidden;
+  font-family: 'Rubik', sans-serif;
+  color: var(--text-body);
+  font-size: 14px;
+  font-weight: 400;
+  background: var(--white);
+  overflow-x: hidden; 
 }
-html{
-    overflow-x: hidden;
+
+html {
+  overflow-x: hidden; 
 }
 
 p {
-    font-size: 14px;
-    color: #5e629c;
-    line-height: 26px;
-    margin-bottom: 0;
-}
-
-a:hover, a:focus {
-    color: #000;
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 26px;
+  margin-bottom: 0; 
 }
 
 a {
-    color: #000;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+  color: var(--black);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; 
+}
+
+a:hover, a:focus {
+  color: var(--black);
+  text-decoration: none;
+  outline: none; 
 }
 
 h1, h2, h3, h4, h4, h5 {
     font-family: 'Poppis', sans-serif;
     font-size: 40px;
     font-weight: 400;
-    color: #151948;
+    color: var(--text-dark);
 }
 
 ul {
@@ -46,4 +78,26 @@ ul {
 
 ul li {
     list-style: none;
+}
+
+a:not([href]):not([tabindex]) {
+    color: var(--white);
+}
+
+.bg-defult {
+    background: transparent !important;
+}
+
+.bg-defult {
+    background: var(--primary) !important;
+}
+
+
+.section {
+    padding: 130px 0px;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
 }
