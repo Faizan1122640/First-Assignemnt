@@ -84,6 +84,11 @@ a:not([href]):not([tabindex]) {
     color: var(--white);
 }
 
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+  color: var(--white); 
+}
+
+
 .bg-defult {
     background: transparent !important;
 }
