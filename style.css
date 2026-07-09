@@ -89,7 +89,7 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
 }
 
 
-.bg-defult {
+.bg-transparent {
     background: transparent !important;
 }
 
@@ -105,4 +105,11 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
 .form-control:focus {
     outline: none;
     box-shadow: none;
+}
+
+.section-heder {
+  color: var(--white);
+  margin-bottom: 50px;
+  text-align: center;
+  position: relative;
 }
