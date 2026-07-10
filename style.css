@@ -1,24 +1,24 @@
 :root {
-  --primary: #3c9cfd;          
-  --primary-gradient-start: #5533ff;
-  --primary-gradient-end: #25ddf5;  
-  --secondary: #3ecf8e;     
-  --accent: #ff704f;          
+  --primary: #3c9cfd;           /* Bright Blue */
+  --primary-gradient-start: #5533ff; /* Deep Indigo / Purple */
+  --primary-gradient-end: #25ddf5;   /* Light Aqua / Cyan */
+  --secondary: #3ecf8e;         /* Vibrant Mint Green */
+  --accent: #ff704f;            /* Coral / Orange-Red */
   
-  --text-dark: #151948;        
-  --text-muted: #5e629c;       
-  --text-body: #a0a6ad;        
+  --text-dark: #151948;         /* Dark Navy for Headers */
+  --text-muted: #5e629c;        /* Muted Blue-Gray for Paragraphs */
+  --text-body: #a0a6ad;         /* Light Gray for Body Text */
   
-  --bg-light: #f9f9f9;         
-  --bg-dark: #180e29;          
-  --bg-card: #24153c; 
+  --bg-light: #f9f9f9;          /* Light gray background */
+  --bg-dark: #180e29;           /* Deep dark purple/black for footer */
+  --bg-card: #24153c;           /* Deep shade for input backgrounds */
   
   --white: #fff;
   --black: #000;
   --border-color: #ddd;
   --border-light: #ededed;
   
-  
+  /* Additional theme-specific accent tones from source */
   --btn-signin-bg: #7fc9fb;
   --apple-cyan: #2dfbff;
   --subtitle-bg: #dbecff;
@@ -28,11 +28,15 @@
   --green-focus: #e5fff3;
 }
 
-
+/* ==========================================================================
+   IMPORT GOOGLE FONTS
+   ========================================================================== */
 @import url("https://fonts.googleapis.com/css?family=Rubik:400,400i,500");
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600");
 
-
+/* ==========================================================================
+   GENERAL
+   ========================================================================== */
 body {
   font-family: 'Rubik', sans-serif;
   color: var(--text-body);
@@ -99,7 +103,9 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
   background: var(--primary) !important; 
 }
 
-
+/* ==========================================================================
+   Section Title
+   ========================================================================== */
 .section {
   padding: 130px 0px; 
 }
@@ -131,7 +137,9 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
   margin-bottom: 0; 
 }
 
-
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
 .btn {
   font-size: 14px;
   padding: 10px 30px;
@@ -169,7 +177,6 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
   color: var(--white);
   transform: translateY(-2px); 
 }
-
 
 .btn-light-bg {
   background-color: var(--accent); 
@@ -209,7 +216,6 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
   border-color: var(--white);
   transform: translateY(-2px); 
 }
-
 
 .btn-lg {
   padding: 14px 33px;
@@ -315,6 +321,7 @@ button:focus {
 .pl-70 { padding-left: 70px; }
 .pr-70 { padding-right: 70px; }
 
+/* Preloader */
 #preloader {
   position: fixed;
   top: 0;
@@ -322,16 +329,16 @@ button:focus {
   right: 0;
   bottom: 0;
   background-color: var(--white);
-  z-index: 9999999;
+  z-index: 9999999; 
 }
 
 .loader {
   top: 50%;
-  width: 50%;
-  height: 50%;
+  width: 50px;
+  height: 50px;
   border-radius: 100%;
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto; 
 }
 
 #loader-1:before, #loader-1:after {
@@ -360,6 +367,9 @@ button:focus {
   100% { transform: rotate(360deg); } 
 }
 
+/* ========================================================================== 
+   Scroll To Up 
+   ========================================================================== */
 .back-to-top {
   display: none;
   position: fixed;
@@ -386,20 +396,24 @@ button:focus {
   transition: all 0.3s ease-in-out; 
 }
 
+/* ==========================================================================
+   Navbar Style
+   ========================================================================== */
 .logo-menu a {
   font-size: 20px;
-  color: var(--white);
+  color: var(--white); 
 }
 
 .menu-bg {
-   background: var(--primary-gradient-start);
+  background: var(--primary-gradient-start);
   background: linear-gradient(95deg, var(--primary-gradient-start) 40%, var(--primary-gradient-end) 100%) !important;
   box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.1);
   z-index: 9999;
   padding: 5px;
   -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; 
 }
+
 .menu-bg .menu-button {
   top: 0; 
 }
@@ -479,8 +493,11 @@ button:focus {
   outline: none; 
 }
 
+/* ==========================================================================
+   Hero Area
+   ========================================================================== */
 .hero-area {
-  position: relative;
+  position: relative; 
 }
 
 .hero-area .overlay {
@@ -491,6 +508,7 @@ button:focus {
   left: 0px;
   background: var(--primary-gradient-start);
   background: linear-gradient(95deg, var(--primary-gradient-start) 40%, var(--primary-gradient-end) 100%);
+  -webkit-transform: skewY(-12deg);
   transform: skewY(-12deg);
   -webkit-transform-origin: 0;
   transform-origin: 0;
@@ -573,35 +591,35 @@ button:focus {
   max-width: 100%; 
 }
 
-/* --- Global / Reusable Components --- */
-.services-item, 
-.feature-item, 
-.feature-item .feature-icon, 
-.feature-item .feature-icon i {
-  transition: all 0.8s ease;
-}
-
-  /* --- Services Section --- */
+/* ==========================================================================
+   About 
+   ========================================================================== */
 #services .services-item {
   padding: 60px 30px;
   border: 1px solid var(--border-color);
+  -moz-transition: all .8s ease;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease; 
 }
 
 #services .services-item:hover {
   border: 1px solid var(--secondary);
-  box-shadow: 0 0 25px rgba(95, 95, 95, 0.24);
-  transition: all 0.4s ease; /* Faster transition on hover */
+  box-shadow: 0px 0px 25px 0px rgba(95, 95, 95, 0.24);
+  -moz-transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease; 
 }
 
 #services .services-item .icon {
   background: var(--green-tint);
   width: 110px;
   height: 110px;
-  margin: 0 auto 25px;
+  margin: 0px auto;
   text-align: center;
   display: block;
   border-radius: 50%;
-    position: relative;
+  position: relative;
+  margin-bottom: 25px; 
 }
 
 #services .services-item .icon i {
@@ -610,84 +628,92 @@ button:focus {
   position: absolute;
   left: 0;
   right: 0;
-  top: 30%;
+  top: 30%; 
 }
 
 #services .services-item h4 {
   font-size: 20px;
   font-weight: 600;
   color: var(--text-dark);
-  margin-bottom: 15px;
+  margin-bottom: 15px; 
 }
 
 #services .services-item p {
   font-size: 16px;
   margin-bottom: 10px;
-  color: var(--text-muted);
+  color: var(--text-muted); 
 }
 
-/* --- Business Plan Section --- */
+/* ==========================================================================
+   business-plan Section 
+   ========================================================================== */
 #business-plan {
-  padding-bottom: 130px;
+  padding-bottom: 130px; 
 }
 
 #business-plan .container-fluid {
-  padding: 0 30px;
+  padding-right: 30px;
+  padding-left: 30px; 
 }
 
 #business-plan .business-item-info {
-  margin-top: 60px;
+  margin-top: 60px; 
 }
 
 #business-plan .business-item-info h3 {
   font-size: 35px;
   font-weight: 600;
-  margin-bottom: 25px;
+  margin-bottom: 25px; 
 }
 
 #business-plan .business-item-info p {
   font-size: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 20px; 
 }
 
-/* --- Features Section --- */
+/* ==========================================================================
+   Features 
+   ========================================================================== */
 #features {
-  background: var(--bg-light);
+  background: var(--bg-light); 
 }
 
 #features .featured-bg {
-  background: var(--white);
+  background: var(--white); 
 }
 
 #features .featured-border1 {
   border-bottom: 1px solid var(--border-light);
-  border-right: 1px solid var(--border-light);
+  border-right: 1px solid var(--border-light); 
 }
 
 #features .featured-border2 {
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light); 
 }
 
 #features .featured-border3 {
-  border-right: 1px solid var(--border-light);
+  border-right: 1px solid var(--border-light); 
 }
 
 #features .feature-item {
   padding: 30px;
   overflow: hidden;
+  -moz-transition: all .8s ease;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease; 
 }
 
 #features .feature-item .feature-icon {
   background: var(--green-tint);
   width: 100px;
   height: 100px;
-  margin: 12px auto 0;
+  margin: 12px auto 0px;
   text-align: center;
   display: block;
   border-radius: 50%;
   position: relative;
   margin-right: 30px;
-  border: 1px solid var(--secondary);
+  border: 1px solid var(--secondary); 
 }
 
 #features .feature-item .feature-icon i {
@@ -696,33 +722,157 @@ button:focus {
   position: absolute;
   left: 0;
   right: 0;
-  top: 32%;
+  top: 32%; 
 }
 
 #features .feature-item h4 {
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 20px; 
 }
 
 #features .feature-item p {
   font-size: 16px;
-  display: block;
+  display: block; 
 }
 
 #features .feature-item:hover {
-  box-shadow: 0 0 25px rgba(95, 95, 95, 0.24);
-  }
+  box-shadow: 0px 0px 25px 0px rgba(95, 95, 95, 0.24);
+  -moz-transition: all .8s ease;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease; 
+}
 
 #features .feature-item:hover .feature-icon {
-    background: var(--secondary);
+  background: var(--secondary);
+  -moz-transition: all .8s ease;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease; 
 }
 
 #features .feature-item:hover .feature-icon i {
-    color: var(--white);
-  }
+  color: var(--white);
+  -moz-transition: all .8s ease;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease; 
+}
 
-  /* --- Showcase Layout & Styling --- */
+/* ==========================================================================
+   Download App 
+   ========================================================================== */
+#download-app {
+  padding-bottom: 100px; 
+}
+
+#download-app .download-info {
+  padding-top: 30px; 
+}
+
+#download-app .download-info h3 {
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 44px; 
+}
+
+#download-app .download-info p {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 35px; 
+}
+
+#download-app .download-info .downlaod-btn {
+  padding-bottom: 50px;
+  border-bottom: 1px solid var(--accent);
+  margin-bottom: 40px; 
+}
+
+#download-app .download-info .downlaod-btn a {
+  position: relative; 
+}
+
+#download-app .download-info .downlaod-btn a.play-store {
+  font-size: 12px;
+  box-shadow: 0px 10px 20px 2px rgba(255, 112, 79, 0.24);
+  border-radius: 35px;
+  text-transform: inherit;
+  text-align: left;
+  padding: 15px 80px;
+  width: 195px;
+  height: 65px;
+  line-height: 18px;
+  margin-right: 35px;
+  background: var(--accent);
+  background-position: 20% center; 
+}
+
+#download-app .download-info .downlaod-btn a.play-store span {
+  font-size: 15px;
+  font-weight: 500; 
+}
+
+#download-app .download-info .downlaod-btn a.play-store i,
+#download-app .download-info .downlaod-btn a.ios-store i {
+  position: absolute;
+  left: 40px;
+  font-size: 28px;
+  top: 18px; 
+}
+
+#download-app .download-info .downlaod-btn a.play-store i {
+  color: var(--white); 
+}
+
+#download-app .download-info .downlaod-btn a.ios-store i {
+  color: var(--black); 
+}
+
+#download-app .download-info .downlaod-btn a.ios-store {
+  border: 1px solid var(--accent);
+  color: var(--text-dark);
+  font-size: 12px;
+  box-shadow: 0px 10px 20px 2px rgba(255, 112, 79, 0.24);
+  border-radius: 35px;
+  text-transform: inherit;
+  text-align: left;
+  padding: 15px 80px;
+  width: 195px;
+  height: 65px;
+  line-height: 18px;
+  margin-right: 35px;
+  background: var(--white);
+  background-position: 20% center; 
+}
+
+#download-app .download-info .downlaod-btn a.play-store:hover {
+  color: var(--text-dark);
+  transition: all 0.8s ease-in-out; 
+}
+
+#download-app .download-info .downlaod-btn a.ios-store span {
+  font-size: 15px; 
+}
+
+#download-app .download-info .downlaod-btn a.ios-store:hover {
+  color: var(--accent);
+  transition: all 0.8s ease-in-out; 
+}
+
+#download-app .download-statatics h3 {
+  color: var(--text-dark);
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 0px; 
+}
+
+#download-app .download-statatics p {
+  font-size: 18px;
+  color: var(--text-muted); 
+}
+
+/* ==========================================================================
+   Showcase 
+   ========================================================================== */
 #showcase {
   padding-bottom: 375px; 
 }
@@ -736,7 +886,7 @@ button:focus {
   width: 97%;
   z-index: 12;
   top: 260px;
-  margin: 0 auto; 
+  margin: 0px auto; 
 }
 
 #showcase .showcase-text h2,
@@ -835,8 +985,9 @@ button:focus {
   padding: 20px 0px; 
 }
 
-
-
+/* ==========================================================================
+   Testimonial section
+   ========================================================================== */
 #testimonial {
   margin-bottom: 270px;
   background: url(https://preview.uideck.com/items/slick/business/img/bg/testimonial-bg.jpg) no-repeat center center;
