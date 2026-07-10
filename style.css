@@ -825,3 +825,44 @@ button:focus {
   width: 83%;
   margin: 25px; 
 }
+
+#showcase .showcase-slider .screenshot-thumb:hover .hover-content {
+  opacity: 0.8;
+  transition-duration: 500ms; 
+}
+
+#showcase .showcase-slider .owl-wrapper-outer {
+  padding: 20px 0px; 
+}
+
+
+
+#testimonial {
+  margin-bottom: 270px;
+  background: url(https://preview.uideck.com/items/slick/business/img/bg/testimonial-bg.jpg) no-repeat center center;
+  background-size: cover; 
+}
+
+#testimonial .right-position {
+  position: relative; 
+}
+
+#testimonial .testimonial-area {
+  position: absolute;
+  width: 100%;
+  z-index: 12;
+  top: 260px;
+  margin: 0px auto; 
+}
+
+#testimonial #client-testimonial {
+  background-color: var(--white);
+  padding: 54px;
+  box-shadow: 0px 0px 25px 0px rgba(95, 95, 95, 0.24); 
+}
+
+#testimonial #client-testimonial {
+  background-color: var(--white);
+  padding: 54px;
+  box-shadow: 0px 0px 25px 0px rgba(95, 95, 95, 0.24); 
+}
