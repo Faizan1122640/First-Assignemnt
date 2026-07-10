@@ -990,6 +990,9 @@ button:focus {
   100% { transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5); opacity: 0; } 
 }
 
+/* ==========================================================================
+   Our Pricing 
+   ========================================================================== */
 #pricing .pricing-table {
   padding: 55px;
   border: 1px solid #ccc;
@@ -1039,4 +1042,39 @@ button:focus {
   -moz-transition: all .4s ease;
   -webkit-transition: all .4s ease;
   transition: all .4s ease; 
+}
+
+/* ==========================================================================
+   Testimonial Item Styling
+   ========================================================================== */
+#testimonial .testimonial-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+}
+
+#testimonial .testimonial-item .content-inner {
+  order: 1;
+  margin-bottom: 20px; 
+}
+
+#testimonial .testimonial-item .author-info {
+  order: 2;
+  margin-bottom: 20px; 
+}
+
+#testimonial .testimonial-item .client-thumb {
+  order: 3;
+  margin-top: 10px; 
+}
+
+#testimonial .testimonial-item .client-thumb img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto; 
 }
