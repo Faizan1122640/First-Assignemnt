@@ -861,8 +861,131 @@ button:focus {
   box-shadow: 0px 0px 25px 0px rgba(95, 95, 95, 0.24); 
 }
 
-#testimonial #client-testimonial {
-  background-color: var(--white);
-  padding: 54px;
-  box-shadow: 0px 0px 25px 0px rgba(95, 95, 95, 0.24); 
+#testimonial #client-testimonial .content-inner p {
+  font-size: 24px;
+  color: var(--text-muted);
+  font-style: italic;
+  line-height: 35px; 
+}
+
+#testimonial #client-testimonial .author-info {
+  padding-top: 26px;
+  padding-bottom: 20px; 
+}
+
+#testimonial #client-testimonial .author-info h5 {
+  color: var(--text-dark);
+  font-size: 18px; 
+}
+
+#testimonial #client-testimonial h5 span {
+  font-size: 16px;
+  color: var(--text-muted);
+  font-style: italic; 
+}
+
+#testimonial #client-testimonial .owl-controls .owl-buttons div.owl-prev,
+#testimonial #client-testimonial .owl-controls .owl-buttons div.owl-next {
+  color: var(--secondary);
+  margin: 5px;
+  font-size: 16px;
+  border-radius: 50px;
+  background: var(--white);
+  position: absolute;
+  top: 48%;
+  opacity: 1;
+  border: 1px solid #ccc;
+  width: 38px;
+  height: 38px;
+  padding: 8px 0px; 
+}
+
+#testimonial #client-testimonial .owl-controls .owl-buttons div.owl-prev { left: -20px; }
+#testimonial #client-testimonial .owl-controls .owl-buttons div.owl-next { right: -20px; }
+
+#testimonial #client-testimonial .owl-controls .owl-buttons div.owl-prev:hover, 
+#testimonial #client-testimonial .owl-controls .owl-buttons div.owl-next:hover {
+  color: var(--white);
+  background: var(--secondary);
+  border-color: var(--secondary); 
+}
+
+#testimonial .video-promo-content {
+  padding-top: 0;
+  padding-bottom: 300px; 
+}
+
+#testimonial .video-play-button {
+  position: absolute;
+  z-index: 10;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  box-sizing: content-box;
+  display: block;
+  width: 32px;
+  height: 44px;
+  border-radius: 50%;
+  padding: 18px 20px 18px 28px; 
+}
+
+#testimonial .video-play-button:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: var(--white);
+  border-radius: 50%;
+  animation: pulse-border 1500ms ease-out infinite; 
+}
+
+#testimonial .video-play-button:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: var(--white);
+  border-radius: 50%;
+  transition: all 200ms;
+  opacity: 0.5; 
+}
+
+#testimonial .video-play-button:hover:after {
+  background-color: #28ca81; 
+}
+
+#testimonial .video-play-button:hover span {
+  border-left: 22px solid var(--white);
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-radius: 2px; 
+}
+
+#testimonial .video-play-button span {
+  display: block;
+  position: relative;
+  z-index: 3;
+  width: 0;
+  height: 0;
+  border-left: 22px solid var(--secondary);
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-radius: 2px;
+  margin-top: 8px;
+  margin-left: 5px; 
+}
+
+@keyframes pulse-border {
+  0% { transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1); opacity: 1; }
+  100% { transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5); opacity: 0; } 
 }
