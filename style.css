@@ -1663,3 +1663,50 @@ button:focus {
   padding-top: 130px;
   background: var(--bg-dark); 
 }
+
+#footer-Content .footer-logo img {
+  padding-top: 70px; 
+}
+
+#footer-Content .form-control:focus {
+  outline: none;
+  box-shadow: none;
+  background: var(--green-focus); 
+}
+
+#footer-Content .copyright {
+  margin-top: 125px;
+  border-top: 1px solid var(--footer-border);
+  padding-top: 30px;
+  padding-bottom: 30px; 
+}
+
+#footer-Content .copyright p {
+  color: var(--secondary);
+  font-size: 18px; 
+}
+
+#footer-Content .copyright a {
+  color: var(--border-color); 
+}
+
+#footer-Content .widget p {
+  color: #e2e2e2;
+  font-size: 16px;
+  line-height: 32px; 
+}
+
+#footer-Content .widget .subscribe-area {
+  position: relative;
+  height: 40px;
+  margin-top: 18px; 
+}
+
+#footer-Content .widget .subscribe-area input[type=email] {
+  background: var(--bg-card);
+  border: 1px solid var(--white);
+  color: #e2e2e2;
+  font-size: 14px;
+  font-style: italic;
+  height: 38px; 
+}
